@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,6 +150,36 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
 }
+
+/* Bilingual Language Switch */
+.language-switch {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e8f4fd;
+    border-radius: 8px;
+    border: 1px solid #cce0f0;
+}
+
+.language-switch a {
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #4a90e2;
+    font-weight: 500;
+}
+
+.language-switch a:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.language-switch a.active {
+    background-color: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+}
 </style>
 </head>
 
@@ -163,10 +194,17 @@ input:checked + .slider:before {
 </div>
 
 <h1>Buddha Teachings: Path to Nibbāna</h1>
-  <p>A comprehensive guide from basic understanding to advanced Vipassanā practice based on the core teachings of the Buddha.</p>
 
-  <h2 id="toc">Table of Contents</h2>
-  <ol>
+<!-- Bilingual Language Switch -->
+<div class="language-switch">
+    <a href="nivana.html" class="active">English</a>
+    <a href="/nivana.html">Nivana (Bilingual)</a>
+</div>
+
+<p>A comprehensive guide from basic understanding to advanced Vipassanā practice based on the core teachings of the Buddha.</p>
+
+<h2 id="toc">Table of Contents</h2>
+<ol>
     <li><a href="#introduction">Introduction</a></li>
 
     <li><a href="#noble-eightfold-path">1. The Noble Eightfold Path</a></li>
@@ -179,9 +217,8 @@ input:checked + .slider:before {
     <li><a href="#vipassana">8. Vipassanā Meditation</a></li>
     <li><a href="#nibbana">9. Realizing Nibbāna</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
-  </ol>
+</ol>
 
-  
 <h2 id="introduction">Introduction</h2>
 
 <p>The Dhamma — the teaching of the Buddha — is a path of understanding, practice, and realization that leads to the end of suffering. This book is designed to guide you through the core teachings of the Buddha in a clear, systematic way, from foundational concepts to advanced meditation practices leading to Nibbāna.</p>
@@ -212,8 +249,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
   
-  <h2 id="four-noble-truths">The Four Noble Truths</h2>
-
+<h2 id="four-noble-truths">The Four Noble Truths</h2>
 
 <p>The Four Noble Truths (Cattāri Ariyasaccāni) are the foundation of all the Buddha’s teachings. They provide a clear understanding of the nature of existence and the path to liberation. These truths are not theories but direct observations of reality that can be verified through one’s own experience.</p>
 
@@ -397,7 +433,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
   
-  <h2 id="five-aggregates">The Five Aggregates (Pañcakkhandha)</h2>
+<h2 id="five-aggregates">The Five Aggregates (Pañcakkhandha)</h2>
 
 <p>The Buddha taught that what we conventionally call a "self" or "person" is actually a dynamic collection of five aggregates (khandha) — processes that function together but are impermanent and non-self. Clinging to these aggregates as "I" or "mine" leads to suffering.</p>
 
@@ -437,7 +473,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="three-marks">The Three Marks of Existence (Tilakkhaṇa)</h2>
+<h2 id="three-marks">The Three Marks of Existence (Tilakkhaṇa)</h2>
 
 <p>The Three Marks of Existence (Tilakkhaṇa) describe the universal characteristics of all conditioned phenomena (everything that arises and passes away). Insight into these three marks weakens attachment, reduces suffering, and leads to liberation.</p>
 
@@ -456,7 +492,7 @@ input:checked + .slider:before {
 
 <h3>Practice Application</h3>
 <ul>
-  <li>In vipassanā meditation, one observes how sensations, thoughts, and feelings arise and pass away quickly.</li>
+  <li>In vipassanā meditation, observe how sensations, thoughts, and feelings arise and pass away quickly.</li>
   <li>Seeing impermanence leads to detachment; understanding non-self weakens the sense of "I" and "mine."</li>
 </ul>
 
@@ -464,7 +500,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="non-self">Non-self (Anattā)</h2>
+<h2 id="non-self">Non-self (Anattā)</h2>
 
 <p>Non-self (Anattā) is a central teaching of the Buddha. It means that nothing whatsoever — neither body, mind, nor any experience — can be truly called "I," "me," or "mine." What we consider a "self" is simply a temporary combination of changing processes (the five aggregates).</p>
 
@@ -496,7 +532,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="impermanence">Impermanence (Anicca)</h2>
+<h2 id="impermanence">Impermanence (Anicca)</h2>
 
 <p>Impermanence (Anicca) means that all conditioned phenomena are in a state of constant change. Nothing stays the same — all things arise, exist for a time, and pass away. Understanding impermanence deeply weakens attachment and leads to liberation.</p>
 
@@ -528,7 +564,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="suffering">Suffering (Dukkha)</h2>
+<h2 id="suffering">Suffering (Dukkha)</h2>
 
 <p>Suffering (Dukkha) is one of the most fundamental teachings in Buddhism. It is the first of the Four Noble Truths and one of the Three Marks of Existence. Dukkha does not just mean obvious pain or misery but refers to a deeper unsatisfactoriness present in all conditioned existence.</p>
 
@@ -559,7 +595,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="vipassana">Vipassanā Meditation (Insight Meditation)</h2>
+<h2 id="vipassana">Vipassanā Meditation (Insight Meditation)</h2>
 
 <p>Vipassanā (Insight Meditation) is the direct experiential practice of observing reality as it is — seeing clearly the Three Marks of Existence: impermanence (Anicca), suffering (Dukkha), and non-self (Anattā). The purpose of Vipassanā is to penetrate the true nature of phenomena and ultimately attain Nibbāna (liberation).</p>
 
@@ -608,7 +644,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="nibbana">Realizing Nibbāna</h2>
+<h2 id="nibbana">Realizing Nibbāna</h2>
 
 <p><strong>Nibbāna</strong> (also spelled Nirvāṇa) is the ultimate goal of Buddhist practice — the complete cessation of suffering and liberation from the cycle of birth and death (samsāra). It is not a place or a state of existence but the extinguishing of greed, hatred, and delusion.</p>
 
@@ -661,7 +697,7 @@ input:checked + .slider:before {
 
 <nav><a href="#toc">Back to Table of Contents</a></nav>
 
-  <h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>The teachings of the Buddha offer a profound path to understanding the nature of suffering and to ultimately overcoming it. The essential insight that everything is impermanent (anicca), that all experiences are unsatisfactory (dukkha), and that there is no inherent self (anattā) is the foundation of the path leading to Nibbāna. Through the Four Noble Truths and the Eightfold Path, one is guided toward a life of wisdom, ethical conduct, and mental discipline.</p>
 
