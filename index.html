@@ -1,0 +1,1256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddha Teachings: Path to Nibbāna | Discover Inner Peace</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D4AF37'/%3E%3Cpath d='M50 20 L55 40 L75 40 L60 52 L65 72 L50 60 L35 72 L40 52 L25 40 L45 40 Z' fill='%23fff'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==================== CSS Variables ==================== */
+        :root {
+            --primary-gold: #D4AF37;
+            --primary-dark: #8B7355;
+            --secondary-blue: #2C5F7C;
+            --deep-blue: #1a3a52;
+            --light-cream: #F8F6F1;
+            --warm-white: #FFFEF9;
+            --soft-gray: #E8E6E1;
+            --text-dark: #2C2C2C;
+            --text-light: #666666;
+            --accent-orange: #D97E43;
+            --lotus-pink: #E8B4BC;
+            
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Raleway', sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Dark Mode Variables */
+        body.dark {
+            --light-cream: #1a1a1a;
+            --warm-white: #242424;
+            --soft-gray: #333333;
+            --text-dark: #E8E6E1;
+            --text-light: #B0B0B0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        /* ==================== Reset & Base ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.8;
+            background-color: var(--light-cream);
+            color: var(--text-dark);
+            transition: background-color 0.5s, color 0.5s;
+            overflow-x: hidden;
+        }
+
+        /* ==================== Header & Navigation ==================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 254, 249, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        body.dark .header {
+            background: rgba(36, 36, 36, 0.95);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            letter-spacing: 1px;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* ==================== Dark Mode Toggle ==================== */
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+        }
+
+        .theme-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #FDB813 0%, #FF8C42 100%);
+            border-radius: 34px;
+            transition: var(--transition);
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "☀️";
+            height: 24px;
+            width: 24px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        input:checked + .toggle-slider {
+            background: linear-gradient(135deg, #2C5F7C 0%, #1a3a52 100%);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(30px);
+            content: "🌙";
+        }
+
+        /* ==================== Language Switch ==================== */
+        .language-switch {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--soft-gray);
+            padding: 0.3rem;
+            border-radius: 25px;
+        }
+
+        .language-switch a {
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .language-switch a.active,
+        .language-switch a:hover {
+            background: var(--primary-gold);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ==================== Hero Section ==================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(44, 95, 124, 0.9) 0%, rgba(26, 58, 82, 0.85) 100%),
+                        url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&h=900&fit=crop') center/cover;
+            z-index: 0;
+        }
+
+        body.dark .hero-background {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 58, 82, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&h=900&fit=crop') center/cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+            margin: 2rem auto;
+        }
+
+        .hero-quote {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-orange) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+            opacity: 0.7;
+        }
+
+        /* ==================== Main Content ==================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* ==================== Table of Contents ==================== */
+        .toc-section {
+            background: var(--warm-white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 4rem;
+            border-left: 5px solid var(--primary-gold);
+        }
+
+        .toc-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--secondary-blue);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .toc-title:before {
+            content: "🪷";
+            font-size: 2rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .toc-item {
+            background: var(--light-cream);
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            transition: var(--transition);
+            border-left: 3px solid transparent;
+        }
+
+        .toc-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--primary-gold);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toc-item a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .toc-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-gold);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* ==================== Content Sections ==================== */
+        .content-section {
+            background: var(--warm-white);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .content-section:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--secondary-blue);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-gold);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .section-subtitle:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.9;
+            color: var(--text-light);
+        }
+
+        .content-section ul,
+        .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .content-section strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* ==================== Blockquote ==================== */
+        blockquote {
+            background: linear-gradient(135deg, var(--lotus-pink) 0%, var(--soft-gray) 100%);
+            border-left: 5px solid var(--primary-gold);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-dark);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        blockquote:before {
+            content: """;
+            font-size: 4rem;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            color: var(--primary-gold);
+            opacity: 0.3;
+        }
+
+        /* ==================== Feature Cards ==================== */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--light-cream);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ==================== Image Sections ==================== */
+        .image-banner {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .image-with-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .image-with-text img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ==================== Back to Top Button ==================== */
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            padding: 0.8rem 2rem;
+            background: var(--soft-gray);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-gold);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ==================== Footer ==================== */
+        .footer {
+            background: var(--secondary-blue);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        body.dark .footer {
+            background: var(--deep-blue);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+        }
+
+        .footer p {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .footer-divider {
+            width: 100px;
+            height: 2px;
+            background: var(--primary-gold);
+            margin: 2rem auto;
+        }
+
+        /* ==================== Responsive Design ==================== */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-quote {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .image-with-text {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* ==================== Decorative Elements ==================== */
+        .lotus-divider {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 2rem;
+            opacity: 0.6;
+        }
+
+        .section-ornament {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .section-ornament:before {
+            content: "◈ ◆ ◈";
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            letter-spacing: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== Header ==================== -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <!-- Lotus Logo SVG -->
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="lotusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#D97E43;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Lotus Petals -->
+                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient)" transform="rotate(-60 50 70)"/>
+                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient)" transform="rotate(-30 50 70)"/>
+                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient)"/>
+                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient)" transform="rotate(30 50 70)"/>
+                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient)" transform="rotate(60 50 70)"/>
+                    <circle cx="50" cy="70" r="10" fill="#FFF9E6"/>
+                </svg>
+                <span class="logo-text">Path to Nibbāna</span>
+            </div>
+
+            <div class="header-controls">
+                <!-- Language Switch -->
+                <div class="language-switch">
+                    <a href="#" class="active">English</a>
+                    <a href="#">Bilingual</a>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <label class="theme-toggle">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== Hero Section ==================== -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Buddha Teachings</h1>
+            <p class="hero-subtitle">A Journey from Suffering to Liberation</p>
+            <div class="hero-divider"></div>
+            <p class="hero-quote">"One thing do I make known: suffering and the cessation of suffering."</p>
+            <a href="#toc" class="cta-button">Begin Your Journey</a>
+        </div>
+        <div class="scroll-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15l-5-5h10l-5 5z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== Main Content ==================== -->
+    <main class="container">
+
+        <!-- Introduction -->
+        <section class="content-section">
+            <h2 class="section-title">🙏 Welcome</h2>
+            <p>The Dhamma — the teaching of the Buddha — is a path of understanding, practice, and realization that leads to the end of suffering. This comprehensive guide will take you through the core teachings of the Buddha in a clear, systematic way, from foundational concepts to advanced meditation practices leading to Nibbāna.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧘</div>
+                    <h3 class="feature-title">Meditation Practice</h3>
+                    <p class="feature-description">Learn authentic Vipassanā techniques</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📿</div>
+                    <h3 class="feature-title">Core Teachings</h3>
+                    <p class="feature-description">Explore the Four Noble Truths</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☸️</div>
+                    <h3 class="feature-title">Eightfold Path</h3>
+                    <p class="feature-description">Walk the path to liberation</p>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=400&fit=crop" alt="Buddha statue in meditation" class="image-banner">
+
+            <blockquote>
+                "Whether you are new to Buddhism or an experienced practitioner seeking deeper understanding, this guide provides a complete roadmap from beginning study to advanced Vipassanā practice."
+            </blockquote>
+        </section>
+
+        <!-- Table of Contents -->
+        <section id="toc" class="toc-section">
+            <h2 class="toc-title">Table of Contents</h2>
+            <div class="toc-grid">
+                <div class="toc-item">
+                    <a href="#four-noble-truths">
+                        <span class="toc-number">1</span>
+                        <span>The Four Noble Truths</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#eightfold-path">
+                        <span class="toc-number">2</span>
+                        <span>The Noble Eightfold Path</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#dependent-origination">
+                        <span class="toc-number">3</span>
+                        <span>Dependent Origination</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#five-aggregates">
+                        <span class="toc-number">4</span>
+                        <span>The Five Aggregates</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#three-marks">
+                        <span class="toc-number">5</span>
+                        <span>Three Marks of Existence</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#non-self">
+                        <span class="toc-number">6</span>
+                        <span>Non-Self (Anatta)</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#impermanence">
+                        <span class="toc-number">7</span>
+                        <span>Impermanence (Anicca)</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#suffering">
+                        <span class="toc-number">8</span>
+                        <span>Suffering (Dukkha)</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#vipassana">
+                        <span class="toc-number">9</span>
+                        <span>Vipassanā Meditation</span>
+                    </a>
+                </div>
+                <div class="toc-item">
+                    <a href="#nibbana">
+                        <span class="toc-number">10</span>
+                        <span>Realizing Nibbāna</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Noble Truths -->
+        <section id="four-noble-truths" class="content-section">
+            <h2 class="section-title">☸️ The Four Noble Truths</h2>
+            
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1200&h=400&fit=crop" alt="Buddha teaching" class="image-banner">
+            
+            <p>The Four Noble Truths (Cattāri Ariyasaccāni) are the foundation of all the Buddha's teachings. They provide a clear understanding of the nature of existence and the path to liberation.</p>
+
+            <h3 class="section-subtitle">1. The Truth of Suffering (Dukkha)</h3>
+            <p>Life, as we normally experience it, is marked by suffering. Suffering includes not only obvious pain but also subtle dissatisfaction and imperfection in all conditioned experiences.</p>
+            <ul>
+                <li><strong>Birth</strong> is suffering (due to separation and vulnerability)</li>
+                <li><strong>Aging</strong> is suffering (due to decay and weakening)</li>
+                <li><strong>Illness</strong> is suffering (due to discomfort and limitation)</li>
+                <li><strong>Death</strong> is suffering (due to fear, loss, and uncertainty)</li>
+                <li>Association with what we dislike is suffering</li>
+                <li>Separation from what we like is suffering</li>
+                <li>Not getting what we want is suffering</li>
+            </ul>
+
+            <div class="lotus-divider">🪷</div>
+
+            <h3 class="section-subtitle">2. The Truth of the Cause of Suffering (Samudaya)</h3>
+            <p>The cause of suffering is craving (taṇhā) — a deep-seated desire for pleasure, existence, and non-existence.</p>
+            <ul>
+                <li><strong>Kāma-taṇhā:</strong> Craving for sensual pleasures</li>
+                <li><strong>Bhava-taṇhā:</strong> Craving for existence, becoming, identity</li>
+                <li><strong>Vibhava-taṇhā:</strong> Craving for non-existence, destruction</li>
+            </ul>
+
+            <h3 class="section-subtitle">3. The Truth of the Cessation of Suffering (Nirodha)</h3>
+            <p>Suffering can end. When craving ceases, suffering ceases. This is Nibbāna — the unconditioned, the extinguishing of greed, hatred, and delusion.</p>
+
+            <h3 class="section-subtitle">4. The Truth of the Path (Magga)</h3>
+            <p>The way to end suffering is the Noble Eightfold Path, a practical guide for ethical living, mental cultivation, and wisdom development.</p>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Eightfold Path -->
+        <section id="eightfold-path" class="content-section">
+            <h2 class="section-title">⚛️ The Noble Eightfold Path</h2>
+            
+            <img src="https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=1200&h=400&fit=crop" alt="Buddhist wheel" class="image-banner">
+            
+            <p>The Noble Eightfold Path (Ariya Aṭṭhaṅgika Magga) is the practical method taught by the Buddha to end suffering. It is a middle way — avoiding extremes of indulgence and self-mortification.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3 class="feature-title">Right View</h3>
+                    <p class="feature-description">Understanding reality correctly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💭</div>
+                    <h3 class="feature-title">Right Intention</h3>
+                    <p class="feature-description">Cultivating wholesome intentions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Right Speech</h3>
+                    <p class="feature-description">Speaking truthfully and kindly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤲</div>
+                    <h3 class="feature-title">Right Action</h3>
+                    <p class="feature-description">Acting ethically and harmlessly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3 class="feature-title">Right Livelihood</h3>
+                    <p class="feature-description">Earning without harming others</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3 class="feature-title">Right Effort</h3>
+                    <p class="feature-description">Cultivating wholesome states</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Right Mindfulness</h3>
+                    <p class="feature-description">Continuous clear awareness</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Right Concentration</h3>
+                    <p class="feature-description">Developing deep focus</p>
+                </div>
+            </div>
+
+            <blockquote>
+                "Practicing all eight factors together gradually weakens greed, hatred, and delusion, and supports insight into reality as it is."
+            </blockquote>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Dependent Origination -->
+        <section id="dependent-origination" class="content-section">
+            <h2 class="section-title">🔄 Dependent Origination</h2>
+            
+            <p>Dependent Origination (Paṭiccasamuppāda) is the principle that all phenomena arise dependent on causes and conditions. Nothing exists independently or permanently.</p>
+
+            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=1200&h=400&fit=crop" alt="Interconnected nature" class="image-banner">
+
+            <h3 class="section-subtitle">The Twelve Links</h3>
+            <ol>
+                <li><strong>Ignorance (Avijjā)</strong> — Not understanding the Four Noble Truths</li>
+                <li><strong>Volitional Formations (Saṅkhāra)</strong> — Mental formations driven by ignorance</li>
+                <li><strong>Consciousness (Viññāṇa)</strong> — The knowing faculty</li>
+                <li><strong>Name-and-Form (Nāma-rūpa)</strong> — Mind and body</li>
+                <li><strong>Six Sense Bases (Saḷāyatana)</strong> — Eye, ear, nose, tongue, body, mind</li>
+                <li><strong>Contact (Phassa)</strong> — Meeting of sense, object, and consciousness</li>
+                <li><strong>Feeling (Vedanā)</strong> — Pleasant, unpleasant, or neutral</li>
+                <li><strong>Craving (Taṇhā)</strong> — Desire and aversion</li>
+                <li><strong>Clinging (Upādāna)</strong> — Attachment and grasping</li>
+                <li><strong>Becoming (Bhava)</strong> — Process of existence</li>
+                <li><strong>Birth (Jāti)</strong> — Arising of new existence</li>
+                <li><strong>Aging-and-Death (Jarāmaraṇa)</strong> — Inevitable decay and death</li>
+            </ol>
+
+            <div class="section-ornament"></div>
+
+            <blockquote>
+                "When ignorance ceases, volitional formations cease; when volitional formations cease, consciousness ceases — and so on, leading to the cessation of the whole chain and the end of suffering."
+            </blockquote>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Five Aggregates -->
+        <section id="five-aggregates" class="content-section">
+            <h2 class="section-title">🌟 The Five Aggregates</h2>
+            
+            <p>What we conventionally call a "self" or "person" is actually a dynamic collection of five aggregates (khandha) — processes that function together but are impermanent and non-self.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧍</div>
+                    <h3 class="feature-title">Form (Rūpa)</h3>
+                    <p class="feature-description">Physical body and material form</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">😊</div>
+                    <h3 class="feature-title">Feeling (Vedanā)</h3>
+                    <p class="feature-description">Pleasant, unpleasant, neutral sensations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3 class="feature-title">Perception (Saññā)</h3>
+                    <p class="feature-description">Recognition and labeling</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 class="feature-title">Formations (Saṅkhāra)</h3>
+                    <p class="feature-description">Mental formations and intentions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Consciousness (Viññāṇa)</h3>
+                    <p class="feature-description">Awareness of objects</p>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1200&h=400&fit=crop" alt="Meditation and mindfulness" class="image-banner">
+
+            <blockquote>
+                "Clinging to the five aggregates as 'I' or 'mine' is the root of suffering. Insight into their true nature leads to disenchantment, dispassion, and ultimately freedom (Nibbāna)."
+            </blockquote>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Three Marks -->
+        <section id="three-marks" class="content-section">
+            <h2 class="section-title">🔱 The Three Marks of Existence</h2>
+            
+            <p>The Three Marks of Existence (Tilakkhaṇa) describe the universal characteristics of all conditioned phenomena.</p>
+
+            <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1200&h=400&fit=crop" alt="Nature impermanence" class="image-banner">
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏳</div>
+                    <h3 class="feature-title">Impermanence (Anicca)</h3>
+                    <p class="feature-description">All phenomena are in constant flux</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💔</div>
+                    <h3 class="feature-title">Suffering (Dukkha)</h3>
+                    <p class="feature-description">Clinging to impermanent things causes suffering</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👤</div>
+                    <h3 class="feature-title">Non-Self (Anattā)</h3>
+                    <p class="feature-description">No permanent, unchanging self exists</p>
+                </div>
+            </div>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Vipassana -->
+        <section id="vipassana" class="content-section">
+            <h2 class="section-title">🧘‍♂️ Vipassanā Meditation</h2>
+            
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=400&fit=crop" alt="Meditation practice" class="image-banner">
+            
+            <p>Vipassanā (Insight Meditation) is the direct experiential practice of observing reality as it is — seeing clearly the Three Marks of Existence: impermanence, suffering, and non-self.</p>
+
+            <h3 class="section-subtitle">Four Foundations of Mindfulness</h3>
+            <ol>
+                <li><strong>Contemplation of Body (Kāyānupassanā)</strong> — Observing breathing, posture, bodily sensations</li>
+                <li><strong>Contemplation of Feelings (Vedanānupassanā)</strong> — Noticing pleasant, unpleasant, or neutral feelings</li>
+                <li><strong>Contemplation of Mind (Cittānupassanā)</strong> — Observing mental states</li>
+                <li><strong>Contemplation of Dhammas (Dhammānupassanā)</strong> — Observing categories of experience</li>
+            </ol>
+
+            <blockquote>
+                "There is one way for the purification of beings, for overcoming sorrow and lamentation, for the disappearance of pain and grief, for the attainment of the true way, for the realization of Nibbāna — that is the Four Foundations of Mindfulness."
+                <br>— Satipaṭṭhāna Sutta
+            </blockquote>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Nibbana -->
+        <section id="nibbana" class="content-section">
+            <h2 class="section-title">✨ Realizing Nibbāna</h2>
+            
+            <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?w=1200&h=400&fit=crop" alt="Peace and enlightenment" class="image-banner">
+            
+            <p><strong>Nibbāna</strong> is the ultimate goal of Buddhist practice — the complete cessation of suffering and liberation from the cycle of birth and death (samsāra).</p>
+
+            <h3 class="section-subtitle">What is Nibbāna?</h3>
+            <ul>
+                <li>Extinction of the causes of suffering (craving, aversion, ignorance)</li>
+                <li>Freedom from all mental defilements and karmic formations</li>
+                <li>Unconditioned, timeless, beyond birth and death</li>
+            </ul>
+
+            <blockquote>
+                "There is, bhikkhus, an unborn, unoriginated, uncreated, unconditioned. If there were not this unborn, unoriginated, uncreated, unconditioned, there would be no escape from the born, originated, created, conditioned."
+                <br>— Udāna 8.3
+            </blockquote>
+
+            <h3 class="section-subtitle">Four Stages of Liberation</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌊</div>
+                    <h3 class="feature-title">Sotāpanna</h3>
+                    <p class="feature-description">Stream-enterer: First glimpse of Nibbāna</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Sakadāgāmī</h3>
+                    <p class="feature-description">Once-returner: Weakens desires</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <h3 class="feature-title">Anāgāmī</h3>
+                    <p class="feature-description">Non-returner: Eradicates sensual desire</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Arahant</h3>
+                    <p class="feature-description">Fully liberated: Complete enlightenment</p>
+                </div>
+            </div>
+
+            <div class="lotus-divider">🪷 🪷 🪷</div>
+
+            <blockquote>
+                "Nibbāna is the ultimate peace and freedom attained through extinguishing greed, hatred, and delusion. It is realized through disciplined practice of morality, concentration, and insight."
+            </blockquote>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="content-section">
+            <h2 class="section-title">🙏 Conclusion</h2>
+            
+            <img src="https://images.unsplash.com/photo-1507290439931-a861b5a38200?w=1200&h=400&fit=crop" alt="Peaceful landscape" class="image-banner">
+            
+            <p>The teachings of the Buddha offer a profound path to understanding the nature of suffering and to ultimately overcoming it. The essential insight that everything is impermanent (anicca), that all experiences are unsatisfactory (dukkha), and that there is no inherent self (anattā) is the foundation of the path leading to Nibbāna.</p>
+
+            <h3 class="section-subtitle">Your Practice Journey</h3>
+            <ul>
+                <li>Practice Vipassanā meditation regularly to gain insight</li>
+                <li>Adopt the Eightfold Path as a practical guide for daily living</li>
+                <li>Cultivate mindfulness and wisdom consistently</li>
+                <li>Remember that the path is gradual and requires patience</li>
+            </ul>
+
+            <div class="section-ornament"></div>
+
+            <blockquote>
+                "May your journey be one of peace, understanding, and liberation. May you realize the true nature of existence and awaken to the freedom that lies within."
+            </blockquote>
+
+            <div class="lotus-divider">🪷</div>
+
+            <a href="#toc" class="back-to-top">↑ Back to Contents</a>
+        </section>
+
+    </main>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Lotus Logo -->
+            <svg class="footer-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="lotusGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#D97E43;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient2)" transform="rotate(-60 50 70)"/>
+                <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient2)" transform="rotate(-30 50 70)"/>
+                <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient2)"/>
+                <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient2)" transform="rotate(30 50 70)"/>
+                <ellipse cx="50" cy="70" rx="8" ry="25" fill="url(#lotusGradient2)" transform="rotate(60 50 70)"/>
+                <circle cx="50" cy="70" r="10" fill="#FFF9E6"/>
+            </svg>
+
+            <p>Path to Nibbāna - Buddha Teachings</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">A comprehensive guide to the Dhamma</p>
+            
+            <div class="footer-divider"></div>
+            
+            <p style="font-size: 0.85rem;">May all beings be free from suffering</p>
+            <p style="font-size: 0.85rem;">May all beings find peace and liberation</p>
+            
+            <div style="margin-top: 2rem;">
+                <a href="https://info.flagcounter.com/FoRn">
+                    <img src="https://s01.flagcounter.com/count/FoRn/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_20/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JavaScript ==================== -->
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+            darkModeToggle.checked = true;
+        }
+
+        darkModeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                header.style.boxShadow = 'var(--shadow-sm)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section, .feature-card').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+
+    <!-- Cloudflare Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e1081a5a794c4babb59fe6f3bffc3f87"}'></script>
+
+</body>
+</html>
